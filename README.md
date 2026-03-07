@@ -162,7 +162,8 @@ Through this project I learned:
 
 ## Example Interaction
 
-<img width="1408" height="768" alt="Example chat interface" src="https://github.com/user-attachments/assets/59533ae7-3ce1-47fc-b942-85639d72f382" />
+
+<img width="1477" height="364" alt="Screenshot 2026-03-07 at 8 50 26 PM" src="https://github.com/user-attachments/assets/08d2c033-0baf-4fd1-864f-fbb0412b6bde" />
 
 
 
