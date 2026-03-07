@@ -185,9 +185,7 @@ This reduces hallucinations and improves factual accuracy.
 
 ---
 
-## 🧾 Example Interaction
 
-### User Question
 
 # What I Learned
 
@@ -210,6 +208,16 @@ Through this project I learned:
 
 ---
 
+## Research Context
+
+This project was inspired by cognitive neuroscience research on memory consolidation and generalization efficiency.
+
+Specifically:
+
+- Predictive memory compression  
+- Semantic abstraction of knowledge  
+
+
 
 # Screenshots
 
@@ -225,4 +233,6 @@ Through this project I learned:
 ## API screenshot
 <img width="946" height="760" alt="Screenshot 2026-03-07 at 8 51 26 PM" src="https://github.com/user-attachments/assets/f663232b-c570-472f-bdae-05a6bb699131" />
 
+## License
+MIT License
 
