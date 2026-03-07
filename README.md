@@ -113,6 +113,47 @@ Answer Returned
 - pdfplumber  
 
 ---
+## 📂 Project Structure
+
+
+Multimodal-RAG-assistant
+│
+├── data/
+│ └── raw/ # Research PDFs
+│
+├── src/
+│ ├── api/
+│ │ └── server.py # FastAPI backend
+│ │
+│ ├── rag/
+│ │ └── rag_pipeline.py # RAG logic
+│ │
+│ ├── llm/
+│ │ ├── llm_client.py
+│ │ └── local_llm_client.py
+│
+├── web/
+│ └── index.html # Web interface
+│
+├── requirements.txt
+└── README.md
+
+
+---
+
+##  How Retrieval-Augmented Generation Works
+
+RAG improves language model reliability by grounding responses in external knowledge sources.
+
+This system works in three phases:
+
+### 1. Document Processing
+Research papers are loaded and split into smaller chunks.
+
+### 2. Embedding & Storage
+Each chunk is converted into vector embeddings using:
+
+all-MiniLM-L6-v2
 
 # Example Interaction
 
@@ -130,6 +171,23 @@ the conceptual gist of an experience is retained.
 ```
 
 ---
+
+Embeddings are stored in a FAISS vector index.
+
+### 3. Question Answering
+When a user asks a question:
+
+- The question is embedded
+- FAISS retrieves the most relevant document passages
+- The language model generates a grounded answer
+
+This reduces hallucinations and improves factual accuracy.
+
+---
+
+## 🧾 Example Interaction
+
+### User Question
 
 # What I Learned
 
@@ -151,25 +209,7 @@ Through this project I learned:
 - Support reasoning across multiple papers  
 
 ---
-# How Retrieval-Augmented Generation Works
 
-Retrieval-Augmented Generation (RAG) improves language model reliability by grounding responses in external documents.
-
-The process consists of three main stages:
-
-1. **Document Ingestion**
-   - Research papers are loaded and split into smaller text chunks.
-
-2. **Embedding and Storage**
-   - Each chunk is converted into a vector embedding using a transformer model.
-   - The embeddings are stored in a FAISS vector database.
-
-3. **Question Answering**
-   - When a user asks a question:
-     - The question is embedded into a vector
-     - Similar document chunks are retrieved from the vector store
-     - The retrieved context is sent to the language model
-     - The model generates a grounded answer
 
 # Screenshots
 
