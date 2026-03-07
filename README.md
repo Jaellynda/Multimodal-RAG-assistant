@@ -81,22 +81,7 @@ Answer Returned
 
 ---
 
-# System Flow
 
-```text
-User Question
-     ↓
-Web Interface (index.html)
-     ↓
-FastAPI Backend (src/api/server.py)
-     ↓
-RAG Pipeline (src/rag/rag_pipeline.py)
-     ↓
-Vector Store (FAISS embeddings)
-     ↓
-Local LLM (Llama 3 via Ollama)
-     ↓
-Answer Returned
 ```
 
 ---
