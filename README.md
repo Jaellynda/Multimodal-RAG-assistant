@@ -165,5 +165,7 @@ Through this project I learned:
 
 <img width="1477" height="364" alt="Screenshot 2026-03-07 at 8 50 26 PM" src="https://github.com/user-attachments/assets/08d2c033-0baf-4fd1-864f-fbb0412b6bde" />
 
+## API screenshot
+<img width="946" height="760" alt="Screenshot 2026-03-07 at 8 51 26 PM" src="https://github.com/user-attachments/assets/f663232b-c570-472f-bdae-05a6bb699131" />
 
 
