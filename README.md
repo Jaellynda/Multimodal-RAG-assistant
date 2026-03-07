@@ -113,7 +113,7 @@ Answer Returned
 - pdfplumber  
 
 ---
-## 📂 Project Structure
+## Project Structure
 
 
 Multimodal-RAG-assistant
