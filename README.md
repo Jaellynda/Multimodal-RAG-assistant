@@ -1,4 +1,39 @@
 # Multimodal-RAG-assistant
+
+## Quick Demo
+
+1. Start the local LLM server:
+
+```bash
+ollama serve
+# Start the backend API:
+python -m uvicorn src.api.server:app --reload
+#Open the web interface:
+web/index.html
+
+Multimodal-RAG-assistant
+│
+├── data/
+│   └── raw/                 # Research PDFs
+│
+├── src/
+│   ├── api/
+│   │   └── server.py        # FastAPI backend
+│   │
+│   ├── rag/
+│   │   └── rag_pipeline.py  # Retrieval-Augmented Generation pipeline
+│   │
+│   ├── llm/
+│   │   ├── llm_client.py
+│   │   └── local_llm_client.py
+│
+├── web/
+│   └── index.html           # Simple web interface
+│
+├── requirements.txt
+└── README.md
+
+
 # This is a Multimodal RAG Research Assistant
 
 A **local AI research assistant** that reads research papers (PDFs) and answers questions using **retrieval-augmented generation (RAG)** with a **local LLM (Llama 3 via Ollama)** — no API billing, fully local, fast, and research-ready.
@@ -153,6 +188,25 @@ Through this project I learned:
 - Support reasoning across multiple papers  
 
 ---
+# How Retrieval-Augmented Generation Works
+
+Retrieval-Augmented Generation (RAG) improves language model reliability by grounding responses in external documents.
+
+The process consists of three main stages:
+
+1. **Document Ingestion**
+   - Research papers are loaded and split into smaller text chunks.
+
+2. **Embedding and Storage**
+   - Each chunk is converted into a vector embedding using a transformer model.
+   - The embeddings are stored in a FAISS vector database.
+
+3. **Question Answering**
+   - When a user asks a question:
+     - The question is embedded into a vector
+     - Similar document chunks are retrieved from the vector store
+     - The retrieved context is sent to the language model
+     - The model generates a grounded answer
 
 # Screenshots
 
