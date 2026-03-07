@@ -20,6 +20,36 @@ Inspired by the research paper:
 
 ---
 
+
+## Motivation
+
+Large language models can generate fluent answers but often hallucinate
+information when they lack grounding in real documents.
+
+Retrieval-Augmented Generation (RAG) addresses this limitation by
+retrieving relevant knowledge from external documents before generating
+an answer.
+
+This project explores how RAG systems can be used to build a research
+assistant capable of answering questions about academic papers.
+
+## Research Inspiration
+
+This project was inspired by the paper:
+
+"Why the Brain Consolidates: Predictive Forgetting for Optimal Generalisation"
+
+The paper proposes that the brain gradually forgets episodic details
+while retaining conceptual knowledge, allowing better generalization.
+
+This RAG system simulates a similar process:
+
+1. Documents are stored as embeddings
+2. Relevant knowledge is retrieved when needed
+3. The language model generates explanations using retrieved context
+
+In this way, the system behaves like a simplified artificial research assistant.
+
 ## Architecture
 
 ```text
@@ -36,3 +66,67 @@ Vector Store (FAISS embeddings)
 Local LLM (Llama 3 via Ollama)
      ↓
 Answer Returned
+## Tech Stack
+
+Backend:
+- Python
+- FastAPI
+
+Vector Search:
+- FAISS
+- Sentence Transformers (all-MiniLM-L6-v2)
+
+Language Model:
+- Llama 3
+- Ollama (local inference)
+
+Frontend:
+- HTML
+- JavaScript
+
+Document Processing:
+- pdfplumber
+## Example Interaction
+
+Question:
+How does predictive forgetting happen?
+
+Answer:
+Predictive forgetting occurs when episodic details fade while
+the conceptual gist of an experience is retained.
+
+## What I Learned
+
+Through this project I learned:
+
+- How Retrieval-Augmented Generation (RAG) systems work
+- How embeddings enable semantic search
+- How to build a FastAPI backend for AI applications
+- How to integrate a local LLM using Ollama
+- How to connect a web interface to an AI backend
+## Future Improvements
+
+- Add chat memory for multi-turn conversations
+- Allow users to upload PDFs from the web interface
+- Implement streaming responses
+- Support reasoning across multiple papers
+
+##Diagram Image
+User
+ ↓
+Web UI
+ ↓
+FastAPI
+ ↓
+RAG Retriever
+ ↓
+Vector DB
+ ↓
+LLM
+
+<img width="1113" height="597" alt="Screenshot 2026-03-07 at 8 47 09 PM" src="https://github.com/user-attachments/assets/3c2fb166-610e-46c6-ab14-eccf7606be11" />
+
+<img width="1408" height="768" alt="image" src="https://github.com/user-attachments/assets/59533ae7-3ce1-47fc-b942-85639d72f382" />
+
+
+
