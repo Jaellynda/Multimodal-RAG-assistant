@@ -199,14 +199,26 @@ Through this project I learned:
 
 ---
 
-# Future Improvements
 
-- Add chat memory for multi-turn conversations  
-- Allow users to upload PDFs from the web interface  
-- Implement streaming responses  
-- Support reasoning across multiple papers  
+## Key Features
 
+• Retrieval-Augmented Generation (RAG) for grounded responses  
+• Semantic search over research documents  
+• Local LLM inference using Llama 3 (via Ollama)  
+• FastAPI backend with REST API endpoints  
+• Web interface for interactive research queries  
+• Chat memory for multi-turn conversations  
+
+The system retrieves relevant passages from stored research papers before generating answers, reducing hallucinations and improving factual grounding.
 ---
+
+## Design Considerations
+
+This project explores how retrieval-based architectures can reduce hallucinations in language models.
+
+Inspired by cognitive science research on predictive forgetting, the system stores compressed semantic representations of documents and retrieves relevant knowledge only when needed.
+
+This approach mirrors how biological memory systems prioritize conceptual understanding over raw episodic detail.
 
 ## Research Context
 
