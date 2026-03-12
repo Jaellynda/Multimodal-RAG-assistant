@@ -211,7 +211,17 @@ Through this project I learned:
 
 The system retrieves relevant passages from stored research papers before generating answers, reducing hallucinations and improving factual grounding.
 ---
+## V2 Features — Startup AI Level 
 
+- Drag-and-drop PDF upload
+- Streaming AI responses (typing effect)
+- Multi-turn chat memory
+- Multi-paper reasoning & comparison
+- Highlight citations in answers
+- Summarize multiple papers
+- Export conversation to PDF
+- Local computer vision (image/PDF figure processing)
+- 
 ## Design Considerations
 
 This project explores how retrieval-based architectures can reduce hallucinations in language models.
